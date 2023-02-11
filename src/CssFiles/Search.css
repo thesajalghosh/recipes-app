@@ -1,0 +1,38 @@
+.search-container{
+    margin: 18px;
+}
+.heading{
+    display: flex;
+    gap: 21px;
+    margin-left: 14%;
+}
+
+.input, .button, .suprise-btn{
+    font-size: medium;
+    border-radius: 30px;
+    padding: 9px;
+    font-weight: bold;
+}
+.input{
+    width: 20%;
+}
+.button{
+    width: max-content;
+ border: 3px solid rgb(10, 207, 36);
+    /* background-color: rgb(8, 172, 90); */
+    border-radius: 30px;
+   
+    color: rgb(12, 13, 14);
+}
+
+.button:hover{
+    background-color: rgb(103, 10, 116);
+    color: aqua;
+}
+.suprise-btn{
+    background-color: rgb(115, 236, 135);
+    color: rgb(187, 70, 90);
+    border: none;
+    padding-left: 14px;
+    padding-right: 14px;
+}
