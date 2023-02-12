@@ -4,14 +4,37 @@ import { useGlobalContext } from '../Context'
 import '../CssFiles/Search.css'
 
 const Search = () => {
+
+const [text, setText] = useState('');
+const {setSearchTerm} = useGlobalContext();
+const {fatchRandomMeals} = useGlobalContext();
+
+const handleChange = (e) =>{
+  setText(e.target.value);
+  console.log(e.target.value)
+}
+
+const handleSubmit = (e) =>{
+  e.preventDefault()
+
+  if(text)
+  {
+    setSearchTerm(text);
+    // setText('');
+  }
+}
+
+
+
+
   return (
     <div className="search-container">
 
-    <form className='heading'>
+    <form className='heading' onSubmit={handleSubmit}>
 
-      <input type='text' placeholder="type your favorite meal" className='input'/>
-      <button className='button'>Search</button>
-      <button className='suprise-btn'>Suprise Me!</button>
+      <input type='text' onChange={handleChange} placeholder="type your favorite meal" className='input' value={text} />
+      <button className='button' >Search</button>
+      <button className='suprise-btn' onClick={fatchRandomMeals}>Suprise Me!</button>
     </form>
       
     </div>
