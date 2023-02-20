@@ -3,14 +3,17 @@ import Favorites from './components/Favorites';
 import Meals from './components/Meals';
 import Model from './components/Model'
 import Search from './components/Search'
+import { useGlobalContext } from './Context';
 
 function App() {
+
+  const {showModel} = useGlobalContext()
   return (
     <div className="App">
     <Search/>
     <Favorites/>
     <Meals/>
-    <Model/>
+    {showModel &&  <Model/>}
     
       
     </div>

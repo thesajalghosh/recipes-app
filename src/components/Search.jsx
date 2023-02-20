@@ -23,7 +23,11 @@ const handleSubmit = (e) =>{
     // setText('');
   }
 }
-
+const handleRandomMeal = () =>{
+  setSearchTerm()
+  setText('')
+  fatchRandomMeals();
+}
 
 
 
@@ -34,7 +38,7 @@ const handleSubmit = (e) =>{
 
       <input type='text' onChange={handleChange} placeholder="type your favorite meal" className='input' value={text} />
       <button className='button' >Search</button>
-      <button className='suprise-btn' onClick={fatchRandomMeals}>Suprise Me!</button>
+      <button className='suprise-btn' onClick={handleRandomMeal}>Suprise Me!</button>
     </form>
       
     </div>

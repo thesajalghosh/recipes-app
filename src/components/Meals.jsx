@@ -6,7 +6,7 @@ import {  FcLike } from 'react-icons/fc';
 
 const Meals = () => {
 
-  const {loading, meals} = useGlobalContext();
+  const {loading, meals, selectMeal} = useGlobalContext();
 
  if(loading)
  return(<div className="loading">
@@ -24,16 +24,16 @@ const Meals = () => {
     <div className="container">
     <div className="main">
       {meals.map((singleMeal) =>{
-        console.log(singleMeal)
+        
         const {idMeal, strMeal: title, strMealThumb: image} = singleMeal
         return(
           <div key={idMeal} className='singlemeal'>
-          <img src={image} alt='this is meal ' className="picture"/>
+          <img src={image} alt='this is meal ' className="picture" />
           <div className="footer">
           
          <h3 className="title">{title}</h3>
          <div className="lower-title">
-         <button className='btn'>Show More About Dish</button>
+         <button className='btn' onClick={()=>selectMeal(idMeal)} >Show More About Dish</button>
          <FcLike className="icon"></FcLike>
          </div>
          </div>
