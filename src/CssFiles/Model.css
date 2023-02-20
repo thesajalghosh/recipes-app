@@ -45,10 +45,16 @@
 }
 .model__btn{
     font-family: 'Mukta', sans-serif;
-    padding: 8px;
+    padding: 3px;
     margin-top: 8px;
     margin-left: 35px;
     margin-bottom: 8px;
     width: 80%;
+    background-color: red;
+    font-size: xx-large;
 
+}
+.model__btn:hover{
+    background-color: black;
+    color: white;
 }

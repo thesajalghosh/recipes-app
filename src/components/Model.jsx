@@ -21,7 +21,7 @@ const {strMealThumb:image, strMeal:title, strInstructions:text, strSource:source
 
     </div>
 
-    <button className='model__btn'  onClick={closeModel}> close</button>
+    <button className='model__btn'  onClick={closeModel}> Close</button>
 
     </div>
 
