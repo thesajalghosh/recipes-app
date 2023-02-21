@@ -7,11 +7,11 @@ import { useGlobalContext } from './Context';
 
 function App() {
 
-  const {showModel} = useGlobalContext()
+  const {showModel, favorites} = useGlobalContext()
   return (
     <div className="App">
     <Search/>
-    <Favorites/>
+    {favorites.length >0 && <Favorites/>}
     <Meals/>
     {showModel &&  <Model/>}
     
