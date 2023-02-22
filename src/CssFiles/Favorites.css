@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.favorite__container{
+    background-color: black;
+    width: 65.4%;
+   margin-left: 15%;
+   padding: 2px;
+   
+    
+
+}
+.favorite__container > h4{
+    color: white;
+    padding: 4px;
+    margin: 3px 4px 3px 5px;
+}
+
 .favorite__img{
-    height: 5px;
-    width: 5px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
+}
+.favorite__content{
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    gap: 4px;
+   
+}
+.favorite__item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 4px;
+}
+.favorite__btn{
+    border: none;
+    background-color: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: smaller;
 }

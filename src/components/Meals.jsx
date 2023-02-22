@@ -6,7 +6,7 @@ import { FcLike } from 'react-icons/fc';
 
 const Meals = () => {
 
-  const { loading, meals, selectMeal, addToFavorite, removeFromFavorite } = useGlobalContext();
+  const { loading, meals, selectMeal, addToFavorite } = useGlobalContext();
 
   if (loading)
     return (<div className="loading">

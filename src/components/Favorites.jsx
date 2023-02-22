@@ -1,9 +1,10 @@
 import React from 'react'
 import { useGlobalContext } from '../Context'
+import "../CssFiles/Favorites.css"
 
 const Favorites = () => {
 
-  const {favorites, selectMeal, removeFromFavorite} = useGlobalContext()
+  const {favorites,  removeFromFavorite} = useGlobalContext()
 
   return (
     <section className='favorite'>
@@ -17,8 +18,10 @@ const Favorites = () => {
           const {idMeal, strMealThumb: image} = item;
 
           return<div key={idMeal} className='favorite__item'>
+          <div >
           <img src={image} alt='favorite__img' className='favorite__img'/>
-          <button className='favorite__btn' onClick={()=>removeFromFavorite(idMeal)}>Remove Meal</button>
+          </div>
+          <div className='favorite__btn' onClick={()=>removeFromFavorite(idMeal)}>Remove </div>
 
 
           </div>
